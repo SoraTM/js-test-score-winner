@@ -1,0 +1,19 @@
+{
+    "name": "test-score-winner",
+    "description": "Just another test task",
+    "version": "0.0.1",
+    "main": "index.js",
+    "email": "timur.malikin@gmail.com",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SoraTM/js-test-score-winner"
+    },
+    "scripts": {
+        "test": "babel-node --presets=es2015 test.js"
+    },
+    "devDependencies": {
+        "babel-cli": "latest",
+        "babel-preset-es2015": "latest"
+    }
+}
