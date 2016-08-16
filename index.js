@@ -1,24 +1,22 @@
 const compareScore = (rate, real) => {
-    const rateFirst = rate[0];
-    const rateSecond = rate[1];
-    const realFirst = real[0];
-    const realSecond = real[1];
-    
-    if (rateFirst === realFirst && rateSecond === realSecond) { 
-        return 2; 
+    if (rate === real) {
+        return 2;
     }
-    
-    if (rateFirst !== realFirst || rateSecond !== realSecond){
-        if((rateFirst === rateSecond && realFirst === realSecond)){
-                return 1;
-        }
-        if((rateFirst > rateSecond && realFirst > realSecond) || 
-            (rateFirst < rateSecond && realFirst < realSecond)){
-                return 1;
-        }        
+
+    if (getWinner(rate) === getWinner(real)) {
+        return 1;
     }
-    
+
     return 0;
 };
+
+const getWinner = (score) => {
+    const scoreFirst = score[0];
+    const scoreSecond = score[2];
+    
+    if (scoreFirst > scoreSecond) return "first";
+    if (scoreFirst < scoreSecond) return "second";
+    return "friendship";
+}
 
 export default compareScore;
