@@ -1,5 +1,7 @@
 const getWinner = (score) => {
-  const [scoreFirst, , scoreSecond] = score;
+  const scoreArr = score.split(':');
+  const scoreFirst = parseInt(scoreArr[0], 10);
+  const scoreSecond = parseInt(scoreArr[1], 10);
 
   if (scoreFirst > scoreSecond) return 'first';
   if (scoreFirst < scoreSecond) return 'second';
