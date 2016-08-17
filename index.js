@@ -1,6 +1,5 @@
 const getWinner = (score) => {
-  const scoreFirst = score[0];
-  const scoreSecond = score[2];
+  const [scoreFirst, , scoreSecond] = score;
 
   if (scoreFirst > scoreSecond) return 'first';
   if (scoreFirst < scoreSecond) return 'second';
