@@ -10,10 +10,17 @@
     "url": "https://github.com/SoraTM/js-test-score-winner"
   },
   "scripts": {
-    "test": "babel-node --presets=es2015 test.js"
+    "test": "babel-node --presets=es2015 test.js",
+    "eslint": "eslint"
   },
   "devDependencies": {
     "babel-cli": "latest",
-    "babel-preset-es2015": "latest"
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "latest",
+    "eslint": "^3.3.1",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.1.1"
   }
 }
